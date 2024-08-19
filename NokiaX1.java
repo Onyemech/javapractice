@@ -5,12 +5,12 @@ public class NokiaX1 {
     Scanner phoneMenu = new Scanner(System.in);
     String choice = "Back";
 	while (true)  {
-    String menu = "Hello Welcome to Nokia Select any of the options below\n" +
-      "1 -> Phone book\n" +
-      "2 -> Messages\n" +
-      "3 -> Chat\n" +
-      "4 -> Call register\n" +
-      "5 -> Tone\n" +
+    String menu = "Hello Welcome to Nokia Select any of the options below\n
+      "1 -> Phone book\n 
+      "2 -> Messages\n 
+      "3 -> Chat\n" 
+      "4 -> Call register\n 
+      "5 -> Tone\n
       "6 -> Settings\n" +
       "7 -> Call divert\n" +
       "8 -> Games\n" +
@@ -19,7 +19,7 @@ public class NokiaX1 {
       "11 -> Clocks\n" +
       "12 -> Profiles\n" +
       "13 -> Sim services\n" +
-	"0 -> Power off";
+	"0 -> Back";
     System.out.println(menu);
     int userInput = phoneMenu.nextInt();
     switch (userInput) {
