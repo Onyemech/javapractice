@@ -1,31 +1,37 @@
 import java.util.Scanner;
 
 public class NokiaX1 {
+
   public static void main(String[] args) {
+
     Scanner phoneMenu = new Scanner(System.in);
     String choice = "Back";
+
 	while (true)  {
-    String menu = "Hello Welcome to Nokia Select any of the options below\n
-      "1 -> Phone book\n 
-      "2 -> Messages\n 
-      "3 -> Chat\n" 
-      "4 -> Call register\n 
-      "5 -> Tone\n
-      "6 -> Settings\n" +
-      "7 -> Call divert\n" +
-      "8 -> Games\n" +
-      "9 -> Calculator\n" +
-      "10 -> Reminders\n" +
-      "11 -> Clocks\n" +
-      "12 -> Profiles\n" +
-      "13 -> Sim services\n" +
-	"0 -> Back";
+
+    String menu = """ Hello Welcome to Nokia Select any of the options below\n
+      1 -> Phone book\n 
+      2 -> Messages\n 
+      3 -> Chat\n 
+      4 -> Call register\n 
+      5 -> Tone\n
+      6 -> Settings\n 
+      7 -> Call divert\n 
+      8 -> Games\n 
+      9 -> Calculator\n 
+      10 -> Reminders\n 
+      11 -> Clocks\n 
+      12 -> Profiles\n 
+      13 -> Sim services\n 
+	0 -> Back """;
+
     System.out.println(menu);
     int userInput = phoneMenu.nextInt();
     switch (userInput) {
       case 1:
         System.out.println("Phone book");
         break;
+
       case 2:
         System.out.println("Messages");
         int messageset = phoneMenu.nextInt();
@@ -46,9 +52,11 @@ public class NokiaX1 {
             break;
         }
         break;
+
       case 3:
         System.out.println("Chat");
         break;
+
       case 4:
         System.out.println("Call Register");
         int callRegister = phoneMenu.nextInt();
@@ -58,9 +66,11 @@ public class NokiaX1 {
             break;
         }
         break;
+
       case 5:
         System.out.println("Tone");
         break;
+
       case 6:
         System.out.println("Settings");
         int settings = phoneMenu.nextInt();
@@ -76,18 +86,23 @@ public class NokiaX1 {
             break;
         }
         break;
+
       case 7:
         System.out.println("Call divert");
         break;
+
       case 8:
         System.out.println("Games");
         break;
+
       case 9:
         System.out.println("Calculator"); 
         break;
+
       case 10:
         System.out.println("Reminders");
-        break;s
+        break;
+
       case 11:
         System.out.println("Clock");
         int clock = phoneMenu.nextInt();
@@ -101,9 +116,11 @@ public class NokiaX1 {
       case 12:
         System.out.println("Profiles");
         break;
+
       case 13:
         System.out.println("SIM services");
         break;
+
       case 0: 
 	System.out.println(menu);
       default:
