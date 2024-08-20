@@ -1,29 +1,32 @@
 import java.util.Scanner;
 
-public class NokiaX1 {
+public class Nokia3310 {
 
   public static void main(String[] args) {
 
     Scanner phoneMenu = new Scanner(System.in);
-    String choice = "Back";
+    boolean goBack = false;
 
-	while (true)  {
+	while (!goBack)  {
 
-    String menu = """ Hello Welcome to Nokia Select any of the options below\n
-      1 -> Phone book\n 
-      2 -> Messages\n 
-      3 -> Chat\n 
-      4 -> Call register\n 
-      5 -> Tone\n
-      6 -> Settings\n 
-      7 -> Call divert\n 
-      8 -> Games\n 
-      9 -> Calculator\n 
-      10 -> Reminders\n 
-      11 -> Clocks\n 
-      12 -> Profiles\n 
-      13 -> Sim services\n 
-	0 -> Back """;
+    String menu = """
+      Hello Welcome to Nokia
+     Select any of the options below
+      1 -> Phone book
+      2 -> Messages
+      3 -> Chat 
+      4 -> Call register 
+      5 -> Tone
+      6 -> Settings
+      7 -> Call divert
+      8 -> Games
+      9 -> Calculator 
+      10 -> Reminders
+      11 -> Clocks
+      12 -> Profiles
+      13 -> Sim services
+       0 -> back
+	"""; 
 
     System.out.println(menu);
     int userInput = phoneMenu.nextInt();
@@ -70,20 +73,24 @@ public class NokiaX1 {
       case 5:
         System.out.println("Tone");
         break;
-
       case 6:
+	while (!goBack) {
         System.out.println("Settings");
         int settings = phoneMenu.nextInt();
         switch (settings) {
          case 1:
-            System.out.println("Call settings\n1.Automatic redial\n2.Speed dialling\n3.Call waiting options\n4.Own number sending\n5.Phone line in use\n6.Automatic answer");
+            System.out.println("Call settings\n1.Automatic redial\n2.Speed dialling\n3.Call waiting options\n4.Own number sending\n5.Phone line in use\n6.Automatic answer\n0.Back");
             break;
          case 2:
-            System.out.println("1.Phone Setting\nlanguage\n2.Cell info display\n3.Welcome note\n4.network\n5.Lights\n6.Confirm SIM service actions");
+            System.out.println("1.Phone Setting\nlanguage\n2.Cell info display\n3.Welcome note\n4.network\n5.Lights\n6.Confirm SIM service actions\n0.Back");
             break;
           case 3:
-            System.out.println("Security settings\n1.PIN code\n2.Call barring service\n3.Fixed dialling\n4.Closed user group\n5.Phone Security\n6.Change access codes");
+            System.out.println("Security settings\n1.PIN code\n2.Call barring service\n3.Fixed dialling\n4.Closed user group\n5.Phone Security\n6.Change access codes\n0.Back");
+          case 0:
+          goBack = true;
             break;
+	}
+
         }
         break;
 
@@ -122,7 +129,9 @@ public class NokiaX1 {
         break;
 
       case 0: 
-	System.out.println(menu);
+	goBack = true;
+	break;
+
       default:
         System.out.println("Invalid input please input any of the given option");
 	}
