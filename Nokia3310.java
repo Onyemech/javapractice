@@ -41,6 +41,7 @@ public class Nokia3310 {
 	while (true) {
         switch (messageset) {
       case 7:
+	while (!goBack) {
         System.out.println("Messages\n1.Set 1\n2.Common\n0.Back"); 
         int setcommon = phoneMenu.nextInt();
 	switch (setcommon) {
@@ -49,7 +50,7 @@ public class Nokia3310 {
         break;
       case 2:
         System.out.println("Common\n1.Delivery reports\n2.Reply via same centre\n3.Character support\n0.Back");
-        
+        }
         if (messageset == 0) {break;} }
 	}
             break;
@@ -88,7 +89,7 @@ public class Nokia3310 {
             System.out.println("Security settings\n1.PIN code\n2.Call barring service\n3.Fixed dialling\n4.Closed user group\n5.Phone Security\n6.Change access codes\n0.Back");
           case 0:
           goBack = true;
-            break;
+            return;
 	}
 
         }
