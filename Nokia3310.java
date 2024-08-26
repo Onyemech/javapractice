@@ -7,7 +7,6 @@ public class Nokia3310 {
     Scanner phoneMenu = new Scanner(System.in);
     boolean goBack = false;
 
-	while (!goBack)  {
 
     String menu = """
       Hello Welcome to Nokia
@@ -30,29 +29,33 @@ public class Nokia3310 {
 
     System.out.println(menu);
     int userInput = phoneMenu.nextInt();
-    switch (userInput) {
+	public static int phonebook(userInput) {
+	switch (userInput) {
       case 1:
         System.out.println("Phone book");
-        break;
-
+     String internalMenu = ("1.Service\n2.Search\n3.Add name\n4.Erase\n5.Edit\n6.Assign tone\n7.Send b'card\n8.Options\n9.Speed dials\n10.Voice tags");
+	System.out.println(internalMenu);}
+    
+	break;
       case 2:
         System.out.println("Messages");
-        int messageset = phoneMenu.nextInt();
-	while (true) {
+	    String messages = ("1.Write Messages\n2.inbox\n3.Outbox\n4.Picture messages\n5.Templates\n6.Smileys\n7.Messsages");
+		 System.out.println(messages);
+            int messageset = phoneMenu.nextInt();
         switch (messageset) {
       case 7:
-	while (!goBack) {
         System.out.println("Messages\n1.Set 1\n2.Common\n0.Back"); 
-        int setcommon = phoneMenu.nextInt();
+            int setcommon = phoneMenu.nextInt();
 	switch (setcommon) {
       case 1:
         System.out.println("Set\n1.Messages centre number\n2.Messages sent as\n3.Message validity\n0.Back");
         break;
       case 2:
         System.out.println("Common\n1.Delivery reports\n2.Reply via same centre\n3.Character support\n0.Back");
+	break;
         }
-        if (messageset == 0) {break;} }
-	}
+       
+	
             break;
         }
         break;
@@ -73,7 +76,10 @@ public class Nokia3310 {
 
       case 5:
         System.out.println("Tone");
+	
         break;
+
+
       case 6:
 	while (!goBack) {
         System.out.println("Settings");
@@ -89,27 +95,32 @@ public class Nokia3310 {
             System.out.println("Security settings\n1.PIN code\n2.Call barring service\n3.Fixed dialling\n4.Closed user group\n5.Phone Security\n6.Change access codes\n0.Back");
           case 0:
           goBack = true;
-            return;
+            break;
 	}
 
         }
         break;
 
+
       case 7:
         System.out.println("Call divert");
         break;
+
 
       case 8:
         System.out.println("Games");
         break;
 
+
       case 9:
         System.out.println("Calculator"); 
         break;
 
+
       case 10:
         System.out.println("Reminders");
         break;
+
 
       case 11:
         System.out.println("Clock");
@@ -121,22 +132,26 @@ public class Nokia3310 {
             break;
         }
         break;
+
       case 12:
         System.out.println("Profiles");
         break;
+
 
       case 13:
         System.out.println("SIM services");
         break;
 
-      case 0: 
-	goBack = true;
-	break;
 
+      case 0: 
+	 System.out.println("Bye");
+	 break;
+	
       default:
         System.out.println("Invalid input please input any of the given option");
-	}
- if (userInput == 0){break;}	
+	
+	
     }
   }
+     
 }
