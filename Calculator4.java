@@ -1,4 +1,4 @@
-import java.util.Scanner;
+javaimport java.util.Scanner;
 
 public class Calculator4 {
 

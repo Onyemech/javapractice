@@ -5,7 +5,7 @@ public class Asterisks {
 	for(int count = 1; count < 10;count++)	{
 	for(int counter = 1; counter < 10;counter++)
 	
-	System.out.printf("%d " ,count);
+	System.out.print("* ");
 	//System.out.print(counter);
 
     }

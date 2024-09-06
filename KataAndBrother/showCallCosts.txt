@@ -1,0 +1,19 @@
+public static void showCallCosts  () {
+				String callCost = """
+				Show call costs
+				1.Last call cost
+				2.All calls cost
+				3.Clear counters
+
+				""";
+
+				}
+				public static void callCostSettings () {
+				String callSetting = """
+				Call cost setting
+				1.Call cost limit
+				2.Show costs in
+
+				""";
+
+				}

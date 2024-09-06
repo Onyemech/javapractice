@@ -81,8 +81,7 @@ public class Nokia3310 {
 
 
       case 6:
-	while (!goBack) {
-        System.out.println("Settings");
+	System.out.println("Settings");
         int settings = phoneMenu.nextInt();
         switch (settings) {
          case 1:

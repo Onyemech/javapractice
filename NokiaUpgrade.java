@@ -24,7 +24,7 @@ menu();
       11 -> Clocks
       12 -> Profiles
       13 -> Sim services
-       0 -> back
+       0 -> Power off
 	""";
 	Scanner input = new Scanner(System.in); 
 	 System.out.println(menu);
@@ -92,6 +92,8 @@ menu();
 		      menu();
 		   }	
         	break;
+
+
 	case 4:
         	callRegister();
 		int callRegister = input.nextInt();
@@ -100,6 +102,7 @@ menu();
 		    menu();
 		    int call = input.nextInt();
 		    break;
+
 		   case 5:
 			callDuration5 ();
 			int duration = input.nextInt();
@@ -109,43 +112,132 @@ menu();
 			  break;
 			 }
 		    break;
-		  /* case 6:
+
+		  case 6:
+		    showCallCosts ();
+		   int showCall = input.nextInt();
+		    switch (showCall) {
+			 case 0:
+			  menu();
+			  break;
+			 }
 		    break;
+
 		   case 7:
-		    break;*/
+			callCostSettings ();
+		       int callCost = input.nextInt();
+		    switch (callCost) {
+			 case 0:
+			  menu();
+			  break;
+			 }
+
+		    break;
 
 		   }
 		break;
+
+
 	case 5:
-        	System.out.println("Tone");
+		tones ();
+	      int tone = input.nextInt();
+			 switch (tone) {
+			 case 0:
+			  menu();
+			  break;
+			 }
+
 		break;
+
+
 	case 6:
-		System.out.println("Settings");
+		settings ();
+		int setting = input.nextInt();
+			 switch (setting) {
+			 case 0:
+			  menu();
+			  break;
+			 case 1:
+			  callSettings ();
+			 int callSett = input.nextInt();
+			 switch (callSett) {
+			 case 0:
+			  menu();
+			  break;
+			 }
+
+			  break;
+			 case 2:
+			  phoneSettings ();
+			 int phoneSett = input.nextInt();
+			 switch (phoneSett) {
+			 case 0:
+			  menu();
+			  break;
+			 }
+
+			  break;
+			 case 3:
+			  securitySettings ();
+			 int securitySett = input.nextInt();
+			 switch (securitySett ) {
+			 case 0:
+			  menu();
+			  break;
+			 }
+
+			  break;
+			 }
 		break;
+
+
 	case 7:
         	System.out.println("Call divert");
         	break;
+
+
 	case 8:
         	System.out.println("Games");
         	break;
+
+
 	case 9:
         	System.out.println("Calculator"); 
         	break;
+
+
 	case 10:
         	System.out.println("Reminders");
         	break;
+
+
 	case 11:
-        	System.out.println("Clock");
+     		clock ();
+		int clock = input.nextInt();
+			 switch (clock) {
+			 case 0:
+			  menu();
+			  break;
+			 }
+
 		break;
+
+
 	case 12:
         	System.out.println("Profiles");
         	break;
+
+
 	case 13:
         	System.out.println("SIM services");
         	break;
+
+
 	case 0: 
 		System.out.println("Bye");
 		break;
+
+
 	default:
         	System.out.println("Invalid input please input any of the given option");
 		System.out.println(menu);
@@ -202,5 +294,119 @@ String internalMenu = ("Phone\n1.Service\n2.Search\n3.Add name\n4.Erase\n5.Edit\
 				  System.out.println(callDuration);
 
 				}
+				public static void showCallCosts  () {
+				String callCost = """
+				Show call costs
+				1.Last call cost
+				2.All calls cost
+				3.Clear counters
+				0.Exit
+				""";
+				System.out.println(callCost);
+
+				}
+				public static void callCostSettings () {
+
+				String callSetting = """
+				Call cost setting
+				1.Call cost limit
+				2.Show costs in
+				0.Exit
+				""";
+				System.out.println(callSetting);
+
+				}
+
+			public static void tones () {
+
+				String tones = """
+				Tones
+				1.Ringing tones
+				2.Ringing volume
+				3.incoming call alert
+				4.Composer
+				5.Message alert tone
+				6.Keypad tones
+				7.Warning and games tones
+				8.Vibrating alert
+				9.Screen saver
+				0.Exit
+				""";
+				System.out.println(tones);
+
+			}
+			public static void settings () {
+
+				String settings = """
+				Settings
+				1.Call Settings
+				2.Phone Settings
+				3.Security settings
+				4.Restore factory settings
+				""";
+				System.out.println(settings);
+
+			}
+				public static void callSettings () {
+				
+				String callSett = """
+				Call settings
+				1.Automatic redial
+				2.Speed dialling
+				3.Call waiting options
+				4.Own number sending
+				5.Phone line in use
+				6.Automatic answer
+				0.Exit
+				""";
+				System.out.println(callSett);
+
+				}
+				public static void phoneSettings () {
+				String phoneSett = """
+				Phone settings
+				1.Language
+				2.Cell info display
+				3.Welcome note
+				4.Network selection
+				5.Lights
+				6.Confirm SIM service actions
+				0.Exit
+				""";
+				System.out.println(phoneSett);
+				
+				}
+				public static void securitySettings () {
+				String securitySett = """
+				Security settings
+				1.PIN code request
+				2.Call barring service
+				3.Fixed dialling
+				4.Closed user group
+				5.Phone security
+				6.Change access codes
+				0.Exit
+				""";
+				System.out.println(securitySett);
+				
+				}
+			public static void clock () {
+				
+				String clock = """
+				Clock
+				1.Alarm clock
+				2.Clock settings
+				3.Date setting
+				4.Stopwatch
+				5.Countdown timer
+				6.Auto update of date and time
+				0.Back
+				""";
+				System.out.println(clock);
+
+			}
+
+
+
 
 }

@@ -1,4 +1,4 @@
-public class Divisior3or4 {
+public class Divisior3and4 {
 
 	public static void main(String... args) {
 	

@@ -7,19 +7,19 @@ public class PrimeNumber {
 	Scanner input = new Scanner(System.in);
 
 		System.out.println("Enter a number: ");
-		int userNumber = input.nextInt;
+		int userNumber = input.nextInt();
 
-		int primeChecker = 2;
+		int counter = 0;
 		
-		if (userNumber % primeChecker == 0) {
-		System.out.println(userNumber +" is not a prime number");
+		for(int i = 1; i <= userNumber; i++) {
+			if (userNumber % i == 0) {
+				counter += 1;
+			}
+			
+		}		
 
-		} else {
-		System.out.println(userNumber +" is a prime number");
-
-		}
-
-
+		if (counter == 2)
+		System.out.println("Number is a prime number");
 	}
 
 }

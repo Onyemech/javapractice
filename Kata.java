@@ -28,18 +28,17 @@ public class Kata {
 
 			int counter = 0;
 			
-			for(int count = 1;count <= userInput;count++) {
+			for(int count = 2;count <= userInput;count++) {
 		 
 				if (userInput % count == 0) {
-				System.out.println("This are the factors of "+ userInput +" they are "+ counter );
+				System.out.println("true" );
 
 					counter++;
 
 				}
 
 			}
-
-			//System.out.println("This are the factors of "+ userInput +" they are "+ counter );
+			        
 			 System.out.println("This does not have factors ");
 
 		}
