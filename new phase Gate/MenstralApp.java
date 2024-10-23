@@ -43,9 +43,6 @@ public class MenstralApp {
 			int ovulationDateEnd = ovulationDate + 14;
 			int safeperiodStart = menstrationStart + 1;
 			int safeperiodEnd = menstrationStart + 7;
-
-			int day = currentDate.getDayOfMonth();
-        		Month currentMonth = currentDate.getMonth();
 			
 			System.out.println("Your next flow date is "+newMenstrationDate);
 			System.out.print("Your ovulation starting date is "+ovulationDate+" and ends on "+ovulationDateEnd);
