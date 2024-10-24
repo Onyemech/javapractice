@@ -26,20 +26,25 @@ public class AllStudentsScore {
 
 			Scanner input = new Scanner(System.in);
 
+			int sum = 0;
+			int [] totalSubResult = new int[numberOfSubjects];
+
 			int [] [] scoreRecorder = new int[numberOfStudents] [numberOfSubjects];
 			for(int count = 0; count < numberOfStudents; count++) {
 				int numbering1 = count + 1;
 				for(int counter = 0; counter < numberOfSubjects ; counter++) {
 					int numbering2 = counter + 1;
 					System.out.print("Entering score for student "+numbering1+"\nEnter score for subject "+numbering2+" : ");
-					if(scoreRecorder[count] [counter] < 0 || scoreRecorder[count] [counter]  > 100) {
-						System.out.println("Invalid score");
+						if(scoreRecorder[count] [counter] < 0 || scoreRecorder[count] [counter]  > 100) {
+							System.out.println("Invalid score");
+						}
+						else {
+							scoreRecorder[count] [counter] = input.nextInt();
+						}
+					for(int getTotal = 0; getTotal < totalSubResult.length; getTotal++) {
+						sum = scoreRecorder[count] [counter];
+						totalSubResult = totalSubResult + sum;
 					}
-
-					else {
-						scoreRecorder[count] [counter] = input.nextInt();
-					}
-				
 				}
 			
 			}
@@ -50,22 +55,22 @@ public class AllStudentsScore {
 		
 				for(int displayResults = 0; displayResults < numberOfSubjects; displayResults++) {
 					if (displayResults * 1 == 0){ 
-						System.out.println("Students	");
-						System.out.println("---------------------------------------------------------------------------------------------------");
-						System.out.println("---------------------------------------------------------------------------------------------------");
+						System.out.println("\tStudents	");
+						System.out.println("\t=================================");
 					}
 				}
 
 				for(int output = 0; output < scoreRecorder.length; output++) {
 
 					int display = output + 1;
-					System.out.print("Students "+display+" : ");
+					System.out.print("\tStudents "+display+" : ");
 					for(int output3 = 0; output3 < numberOfSubjects; output3++) {
 						System.out.print(" "+scoreRecorder[output] [output3]);
 					}
 					System.out.println();
 				}
-
+			System.out.println("\t=================================");
+			
 		}
 
 }
