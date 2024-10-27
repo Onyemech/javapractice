@@ -17,7 +17,7 @@ public class MenstralApp {
             if (userAge < 8 || userAge > 50) {
                 System.out.print("Dear " + userName + ", this is not normal\n please consult your doctor\nThank you for using our mobile app");
             } else {
-                System.out.print("Enter the first day of last period in days: ");
+                System.out.print("Enter the first day of last period : ");
                 int menstrationStart = input.nextInt();
 
                 System.out.print("Enter the length of your menstrual cycle: ");
@@ -41,11 +41,10 @@ public class MenstralApp {
         LocalDate ovulationDate = lastFlowDate.plusDays(menstrationCycle / 2);
 
         LocalDate safePeriodStart = nextMenstrationDate.minusDays(18);
-        LocalDate safePeriodEnd = lastFlowDate.plusDays(5);
 
         System.out.println("Your next flow date is " + nextMenstrationDate);
         System.out.println("Your ovulation starting date is " + ovulationDate);
-        System.out.println("Your safe period starts from " + safePeriodStart + " and ends on " + safePeriodEnd);
+        System.out.println("Your safe period starts from " + safePeriodStart + " and ends in the next 5 days");
     }
 }
 
