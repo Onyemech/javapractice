@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -6,7 +8,11 @@ public class CheckOut {
 	public static void main(String... args) {
 		
 		Scanner input = new Scanner(System.in);
-		
+		LocalDateTime currentDateTime = LocalDateTime.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+		String formattedDateTime = currentDateTime.format(formatter); 
+
+
 		System.out.println("What is the customer's Name ");
 		String customerName = input.nextLine();
 
@@ -48,13 +54,23 @@ public class CheckOut {
 				int discount = input.nextInt();
 
 				System.out.println("Number of pieces : "+pieces);
-				System.out.println("Number of unit : "+unit);
+				System.out.println("Number of unit : "+total);
 
-				for(String output : nameOfItems) 
-					System.out.print(output+"\n");
-				for(int result : nameOfItems) 
-					System.out.println(result);
+				
+			String displayResult = "SEMICOLON STORES\n" +
+                       		"\tMAIN BRANCH\n" +
+                       		"\tLOCATION: 312, HERBERT MACAULAY WAY, SABO YABA, LAGOS.\n" +
+                       		"\tTEL: 03293828343\n" +
+                      		"\tDate: " + formattedDateTime + "\n" +
+                       		"\tCashier: " + cashierName + "\n" +
+                       		"\tCustomer Name: " + customerName + "\n" +
+                       		"\t=============================================";
+			System.out.println("\t" + displayResult);
 
+		for (int result = 0; result < nameOfItems.size(); result++) {
+    			System.out.println("\t" + nameOfItems.get(result) + " " + numberOfUnit.get(result));
+		}
+				
 	}
 
 }
